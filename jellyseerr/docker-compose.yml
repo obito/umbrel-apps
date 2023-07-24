@@ -8,7 +8,7 @@ services:
       PROXY_AUTH_WHITELIST: "/api/*"
 
   server:
-    image: fallenbagel/jellyseer:1.5.0@sha256:3ff0d7af326f4e6db4dbe8679284a4230c9fd4205f59ecc9637ecfbdedb473c3
+    image: fallenbagel/jellyseerr:1.5.0@sha256:3ff0d7af326f4e6db4dbe8679284a4230c9fd4205f59ecc9637ecfbdedb473c3
     environment:
       - PUID=1000
       - PGID=1000
