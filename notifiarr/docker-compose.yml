@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: notifiarr_server_1
+      APP_PORT: 5454
+      PROXY_AUTH_WHITELIST: "*"
+
+  notifiarr:
+    container_name: notifiarr
+    image: golift/notifiarr:latest
+    restart: unless-stopped
+    volumes:
+      - /var/run/utmp:/var/run/utmp
+      - ${APP_DATA_DIR}/data/config:/config
