@@ -9,6 +9,7 @@ services:
 
   server:
     image: lscr.io/linuxserver/sonarr:develop
+    environment:
       - PUID=1000
       - PGID=1000
     volumes:
