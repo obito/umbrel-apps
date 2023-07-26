@@ -8,8 +8,7 @@ services:
       PROXY_AUTH_WHITELIST: "/api/*"
 
   server:
-    image: linuxserver/sonarr:3.0.9@sha256:acd113ad8514ac08e87da01f6cd9a48c3ac30e3c6b77e5f2ea13b80fe1a119d9
-    environment:
+    image: linuxserver/sonarr:develop
       - PUID=1000
       - PGID=1000
     volumes:
