@@ -1,11 +1,6 @@
 version: '3.9'
 
 services:
-  app_proxy:
-    environment:
-      APP_HOST: cloudflared_server_1
-      APP_PORT: 8080
-
   server:
     container_name: cloudflaretunnel
     image: cloudflare/cloudflared:latest
