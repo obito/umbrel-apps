@@ -1,6 +1,12 @@
 version: "3.7"
 
 services:
+  app_proxy:
+    environment:
+      APP_HOST: unpackerr_server_1
+      APP_PORT: 5656
+      PROXY_AUTH_WHITELIST: "/api/*"
+
   server:
     image: hotio/unpackerr:latest
     environment:
